@@ -5,7 +5,7 @@
 ### Installation
 
 ```sh
-$ sudo docker pull phoey/docker-selenium-chrome
+$ docker pull samber/docker-selenium-chrome
 ```
 
 ### Usage
@@ -13,7 +13,7 @@ $ sudo docker pull phoey/docker-selenium-chrome
 Run the container:
 
 ```sh
-$ SELENIUM_CONTAINER=$(sudo docker run --privileged -p 4444:4444 -d phoey/docker-selenium-chrome)
+$ SELENIUM_CONTAINER=$(docker run -p 8080:8080 -d samber/docker-selenium-chrome -port 8080)
 ```
 
 Selenium server will be available on the host machine at port 4444. Web tests 
@@ -25,5 +25,5 @@ https://github.com/dotcloud/docker/issues/1079).
 Shutting down the container:
 
 ```sh
-$ sudo docker kill $SELENIUM_CONTAINER
+$ docker kill $SELENIUM_CONTAINER
 ```
